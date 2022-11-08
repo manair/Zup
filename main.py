@@ -7,7 +7,8 @@ import time
 import config
 import emailsender
 from localdata.DBConn import myConn
-from searxsearchdata import check_keywords
+#from searxsearchdata import check_keywords
+from searxsearchimages import check_keywords
 
 
 def main():
