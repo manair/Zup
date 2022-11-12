@@ -7,8 +7,8 @@ import time
 import config
 import emailsender
 from localdata.DBConn import myConn
-#from searxsearchdata import check_keywords
-from searxsearchimages import check_keywords
+from searxsearchdata import check_keywords
+#from searxsearchimages import check_keywords
 
 
 def main():
@@ -44,6 +44,11 @@ def main():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception:
+        print("Error")
+        pass
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
