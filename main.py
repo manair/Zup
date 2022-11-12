@@ -7,8 +7,8 @@ import time
 import config
 import emailsender
 from localdata.DBConn import myConn
-#from searxsearchdata import check_keywords
-from searxsearchimages import check_keywords
+from searxsearchdata import check_keywords
+#from searxsearchimages import check_keywords
 
 
 def main():
@@ -21,11 +21,12 @@ def main():
 
     time_end = time.time()
     total_time = time_end - time_start
+    category = ['general','images']
 
     for row in k:
         # print(row)
         keywords = row
-        alert_email = check_keywords(keywords)
+        alert_email = check_keywords(keywords,category)
         if alert_email:
             # if we have alerts send them out
             emailsender.send_alert(alert_email)
